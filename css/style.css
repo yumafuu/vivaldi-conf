@@ -1,0 +1,50 @@
+/**
+ * タイトルバーを削除
+ */
+
+.mac #header {
+  min-height: auto;
+}
+
+:not(.address-top).tabs-off #titlebar,
+:not(.address-top).tabs-left #titlebar,
+:not(.address-top).tabs-right #titlebar,
+:not(.address-top).tabs-bottom #titlebar {
+  display: none;
+}
+
+.tabs-top #titlebar {
+  display: block;
+}
+
+#browser.mac.fullscreen #titlebar {
+  display: block;
+}
+
+/**
+ * macOS のウインドウボタン（信号 UI）の表示調整
+ */
+
+#browser.mac:not(.fullscreen) #titlebar.tabless .window-buttongroup {
+  margin-top: 11px;
+}
+
+#browser.mac.fullscreen.address-top #titlebar.tabless .window-buttongroup {
+  margin-top: 12px;
+}
+
+#browser.mac.fullscreen.address-bottom #titlebar.tabless .window-buttongroup {
+  margin-top: 8px;
+}
+
+:not(.fullscreen):not(.address-bottom).tabs-off .mainbar .toolbar,
+:not(.fullscreen):not(.address-bottom).tabs-bottom .mainbar .toolbar,
+:not(.fullscreen):not(.address-bottom).tabs-left .mainbar .toolbar,
+:not(.fullscreen):not(.address-bottom).tabs-right .mainbar .toolbar {
+  padding-left: 72px;
+}
+
+.address-bottom #main > .toolbar {
+  padding-left: 0;
+}
+
